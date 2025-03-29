@@ -65,7 +65,7 @@ model = Sequential([
 # Uncomment one of these at a time:
 
 # Adam optimizer - faster convergence but can overfit more easily
-model.compile(loss='binary_crossentropy', optimizer=tf.keras.optimizers.Adam(learning_rate=0.0001), metrics=['accuracy'])
+model.compile(loss='binary_crossentropy', optimizer=tf.keras.optimizers.RMSprop(learning_rate=0.001), metrics=['accuracy'])
 
 
 history = model.fit(
