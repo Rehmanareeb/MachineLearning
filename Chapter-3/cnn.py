@@ -46,7 +46,7 @@ model.compile(optimizer = 'adam', loss = 'sparse_categorical_crossentropy', metr
 
 #fit
 #model.fit(training_images, training_labels, epochs = 50, callbacks=[callbacks])
-model.fit(training_images, training_labels, epochs=50, callbacks=[callbacks, tensorboard_callback])
+model.fit(training_images, training_labels, epochs=50, callbacks=[callbacks])
 
 #evaluate
 model.evaluate(test_images, test_labels)
