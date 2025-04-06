@@ -19,7 +19,6 @@ callbacks = myCallback()
 
 #Data
 data = tf.keras.datasets.fashion_mnist
-tensorboard_callback = TensorBoard(log_dir='./logs', histogram_freq=1)
 
 #Train and Test split
 (training_images, training_labels), (test_images, test_labels) = data.load_data()
@@ -45,7 +44,6 @@ model = Sequential([
 model.compile(optimizer = 'adam', loss = 'sparse_categorical_crossentropy', metrics = ['accuracy'])
 
 #fit
-#model.fit(training_images, training_labels, epochs = 50, callbacks=[callbacks])
 model.fit(training_images, training_labels, epochs=50, callbacks=[callbacks])
 
 #evaluate
